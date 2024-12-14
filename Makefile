@@ -10,7 +10,7 @@ CFLAGS		=			-Wall -Werror -Wall -MMD -MP
 
 AR			=			ar -rcs
 
-SRC			=			ft_printf.c \
+SRC			=			ft_printf.c\
 						utils.c
 
 OBJ			=			$(SRC:%.c=$(OBJ_DIR)%.o)
