@@ -33,7 +33,7 @@ clean:
 
 fclean:					clean
 							@rm -rf $(NAME)
-							@echo "Deleting 'libft.a'"
+							@echo "Deleting 'libftprintf.a'"
 
 re: 					fclean all
 
