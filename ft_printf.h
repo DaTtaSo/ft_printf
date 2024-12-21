@@ -29,5 +29,3 @@ void	print_address(size_t ptr, int *count);
 size_t	ft_strlen(const char *str);
 
 #endif
-
-g
