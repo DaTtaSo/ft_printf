@@ -26,17 +26,21 @@ $(NAME):				$(OBJ)
 
 $(OBJ_DIR):
 						@mkdir -p $(OBJ_DIR)
+.PHONY: 				all
 
 clean:
 						@rm -rf $(OBJ) $(OBJ_DIR)
 						@echo "Deleting 'obj'"
+.PHONY: 				clean
 
 fclean:					clean
 							@rm -rf $(NAME)
 							@echo "Deleting 'libftprintf.a'"
+.PHONY: 				fclean
 
-re: 					fclean all
+re: 					fclean
+						$(MAKE) all
 
-.PHONY: 				clean fclean re all
+.PHONY: 				re
 
 -include $(DEP)

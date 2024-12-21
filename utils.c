@@ -14,7 +14,12 @@
 
 int	ft_putchar(int c)
 {
-	return (write(1, &c, 1));
+	ssize_t	result;
+
+	result = write(1, &c, 1);
+	if (result == -1)
+		return (-1);
+	return ((int) result);
 }
 
 int	ft_putstr(const char *str)
@@ -25,7 +30,8 @@ int	ft_putstr(const char *str)
 	if (!str)
 		return (ft_putstr("(null)"));
 	while (str[i])
-		ft_putchar(str[i++]);
+		if (ft_putchar(str[i++]) < 0)
+			return (-1);
 	return (i);
 }
 
