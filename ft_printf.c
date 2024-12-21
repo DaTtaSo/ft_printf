@@ -71,3 +71,5 @@ int	ft_printf(const char *format, ...)
 	va_end(arg);
 	return (count);
 }
+
+g

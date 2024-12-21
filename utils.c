@@ -83,3 +83,5 @@ void	ft_putnbr_lb(unsigned long nb, char *base, int *count)
 	else
 		*count += ft_putchar(base[nb]);
 }
+
+g
