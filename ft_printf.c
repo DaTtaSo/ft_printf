@@ -53,6 +53,8 @@ int	ft_printf(const char *format, ...)
 	int		count;
 	va_list	arg;
 
+	if (!format)
+		return (-1);
 	count = 0;
 	va_start(arg, format);
 	while (*format)
